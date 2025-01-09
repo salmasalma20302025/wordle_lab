@@ -13,40 +13,45 @@
 
 from typing import List
 
-# ANSI color formatting
-COLORS = {
-    "GREEN": "\033[32m",
-    "YELLOW": "\033[33m",
-    "RED": "\033[31m",
-    "RESET": "\033[0m"
-}
 
-
-# def header(text: str) -> None:
-#     """Print a header in the terminal."""
-#     pass
+def header() -> None:
+    """Print a header in the terminal."""
+    header = f"""
+----------------------------------------------------------------------------------------------------------
+                                                WORDLE GAME
+----------------------------------------------------------------------------------------------------------
+    """
+    print(header)
 
 
 def game_instructions():
     """Print the game instructions in the terminal."""
-    pass
+    instructions = """ 
+                                            Welcome to Wordle!
+Instructions:
+    1. You have six attempts to guess the five-letter word.
+    2. Each guess must be a valid five-letter word.
+    3. After each guess, the color of the letters will change to show how close your guess was to the word.
+        - GREEN:  Correct letter in the correct position.
+        - YELLOW: Correct letter in the wrong position.
+        - RED:    Incorrect letter.
+
+Good luck!
+----------------------------------------------------------------------------------------------------------
+    """
+    print(instructions)
 
 
 def game_start_display():
     """Print the starting message for the game."""
-    pass
-
-
-def display_word_feedback(guess: str, feedback: List[str]) -> str:
-    """Display the coloured feedback for a guess."""
-    pass
-
+    print("\nStarting the Wordle Game!")
+    print("You have 6 attempts to guess the 5-letter word.")
+    print("Good luck and have fun!\n")
 
 def display_win(word: str, attempt: int) -> None:
     """Display for winning"""
-    pass
-
+    print(f"Congratulations! You guessed the word '{word}' in {attempt} attempts.")
 
 def display_lost(word: str) -> None:
     """Display for losing"""
-    pass
+    print(f"Sorry! You ran out of attempts. The word was '{word}'.")
